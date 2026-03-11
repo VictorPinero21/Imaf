@@ -1,0 +1,70 @@
+---
+interface Props {
+    value: number;
+    suffix?: string;
+    prefix?: string;
+    label: string;
+    duration?: number; // ms
+  }
+  
+  const {
+    value,
+    suffix = "",
+    prefix = "",
+    label,
+    duration = 2500,
+  } = Astro.props;
+  
+  const id = `countup-${Math.random().toString(36).slice(2, 7)}`;
+  ---
+  
+  <div class="text-center">
+    <div
+      id={id}
+      class="text-2xl font-black text-white"
+      style="font-family: 'Barlow Condensed', sans-serif;"
+      data-target={value}
+      data-suffix={suffix}
+      data-prefix={prefix}
+      data-duration={duration}
+    >
+      {prefix}0{suffix}
+    </div>
+    <div class="text-zinc-500 text-xs uppercase tracking-widest mt-1">{label}</div>
+  </div>
+  
+  <script>
+    document.querySelectorAll("[data-target]").forEach((el) => {
+      const target = parseFloat(el.getAttribute("data-target") ?? "0");
+      const suffix = el.getAttribute("data-suffix") ?? "";
+      const prefix = el.getAttribute("data-prefix") ?? "";
+      const duration = parseInt(el.getAttribute("data-duration") ?? "2000");
+  
+      const isDecimal = !Number.isInteger(target);
+      const decimals = isDecimal ? (target.toString().split(".")[1]?.length ?? 2) : 0;
+  
+      let startTime: number | null = null;
+  
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          observer.disconnect();
+  
+          const animate = (timestamp: number) => {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+            const current = eased * target;
+  
+            el.textContent = `${prefix}${current.toFixed(decimals)}${suffix}`;
+  
+            if (progress < 1) requestAnimationFrame(animate);
+          };
+  
+          requestAnimationFrame(animate);
+        });
+      }, { threshold: 0.3 });
+  
+      observer.observe(el);
+    });
+  </script>

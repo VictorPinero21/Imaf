@@ -1,0 +1,129 @@
+---
+// src/pages/aviso-legal.astro
+import BaseLayout from "../layout/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Aviso Legal"
+  description="Aviso legal de Imaf S.L. — Información legal, condiciones de uso y propiedad intelectual de maquimaf.es"
+>
+
+<section class="relative min-h-screen bg-zinc-950 overflow-hidden">
+
+  <!-- Grid background -->
+  <div class="absolute inset-0 opacity-10"
+    style="background-image: linear-gradient(#71717a 1px, transparent 1px), linear-gradient(90deg, #71717a 1px, transparent 1px); background-size: 40px 40px;">
+  </div>
+
+  <!-- Corner brackets -->
+  <div class="absolute top-8 left-8 w-8 h-8 border-t-2 border-l-2 border-orange-500/70"></div>
+  <div class="absolute top-8 right-8 w-8 h-8 border-t-2 border-r-2 border-orange-500/70"></div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-12 py-24">
+
+    <!-- Header -->
+    <div class="mb-16">
+      <div class="inline-flex items-center gap-3 mb-6">
+        <div class="w-6 h-px bg-orange-500"></div>
+        <span class="text-orange-500 text-xs font-mono tracking-[0.3em] uppercase">Legal</span>
+      </div>
+      <h1 class="text-5xl font-black text-white" style="font-family: 'Barlow Condensed', sans-serif;">
+        Aviso Legal
+      </h1>
+      <p class="text-zinc-500 text-sm mt-3 font-mono">Última actualización: {new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+    </div>
+
+    <!-- Contenido -->
+    <div class="space-y-12" style="font-family: 'DM Sans', sans-serif;">
+
+      <div class="space-y-4">
+        <h2 class="text-white text-xl font-bold border-l-2 border-orange-500 pl-4" style="font-family: 'Barlow Condensed', sans-serif;">
+          1. Datos identificativos
+        </h2>
+        <div class="text-zinc-400 leading-relaxed space-y-2 pl-6">
+          <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSICE), se informa:</p>
+          <ul class="space-y-1 mt-4">
+            <li><span class="text-zinc-300 font-medium">Razón social:</span> Imaf S.L.</li>
+            <li><span class="text-zinc-300 font-medium">CIF:</span> B45727732</li>
+            <li><span class="text-zinc-300 font-medium">Domicilio social:</span> Calle Dr. Severo Ochoa, 96R, 45614, Talavera de la Reina, Castilla-La Mancha</li>
+            <li><span class="text-zinc-300 font-medium">Teléfono:</span> +34 925 80 06 95</li>
+            <li><span class="text-zinc-300 font-medium">Email:</span> info@maquimaf.es</li>
+            <li><span class="text-zinc-300 font-medium">Web:</span> https://maquimaf.es</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="text-white text-xl font-bold border-l-2 border-orange-500 pl-4" style="font-family: 'Barlow Condensed', sans-serif;">
+          2. Objeto y ámbito de aplicación
+        </h2>
+        <p class="text-zinc-400 leading-relaxed pl-6">
+          El presente Aviso Legal regula el acceso y uso del sitio web <span class="text-zinc-300">maquimaf.es</span> (en adelante, "el sitio web"), titularidad de Imaf S.L. El acceso al sitio web implica la aceptación plena y sin reservas de las presentes condiciones.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="text-white text-xl font-bold border-l-2 border-orange-500 pl-4" style="font-family: 'Barlow Condensed', sans-serif;">
+          3. Propiedad intelectual e industrial
+        </h2>
+        <p class="text-zinc-400 leading-relaxed pl-6">
+          Todos los contenidos del sitio web —incluyendo textos, imágenes, logotipos, diseño gráfico, código fuente y cualquier otro elemento— son propiedad de Imaf S.L. o de terceros que han autorizado su uso, y están protegidos por la legislación española e internacional de propiedad intelectual e industrial. Queda expresamente prohibida su reproducción, distribución, comunicación pública o transformación sin autorización previa y por escrito de Imaf S.L.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="text-white text-xl font-bold border-l-2 border-orange-500 pl-4" style="font-family: 'Barlow Condensed', sans-serif;">
+          4. Condiciones de uso
+        </h2>
+        <p class="text-zinc-400 leading-relaxed pl-6">
+          El usuario se compromete a hacer un uso adecuado de los contenidos y servicios ofrecidos a través del sitio web, y a no emplearlos para realizar actividades ilícitas o contrarias a la buena fe, al orden público o a las presentes condiciones. Imaf S.L. se reserva el derecho a denegar o retirar el acceso al sitio web a aquellos usuarios que incumplan estas condiciones.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="text-white text-xl font-bold border-l-2 border-orange-500 pl-4" style="font-family: 'Barlow Condensed', sans-serif;">
+          5. Responsabilidad
+        </h2>
+        <p class="text-zinc-400 leading-relaxed pl-6">
+          Imaf S.L. no garantiza la disponibilidad y continuidad del funcionamiento del sitio web, ni la ausencia de errores en sus contenidos. En la medida en que lo permita la legislación aplicable, Imaf S.L. no será responsable de los daños y perjuicios de cualquier naturaleza derivados del acceso o uso del sitio web.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="text-white text-xl font-bold border-l-2 border-orange-500 pl-4" style="font-family: 'Barlow Condensed', sans-serif;">
+          6. Enlaces externos
+        </h2>
+        <p class="text-zinc-400 leading-relaxed pl-6">
+          El sitio web puede contener enlaces a sitios web de terceros. Imaf S.L. no asume ninguna responsabilidad sobre los contenidos, informaciones o servicios que aparezcan en dichos sitios, que tendrán exclusivamente carácter informativo.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="text-white text-xl font-bold border-l-2 border-orange-500 pl-4" style="font-family: 'Barlow Condensed', sans-serif;">
+          7. Legislación aplicable y jurisdicción
+        </h2>
+        <p class="text-zinc-400 leading-relaxed pl-6">
+          Las presentes condiciones se rigen por la legislación española. Para la resolución de cualquier controversia derivada del acceso o uso del sitio web, las partes se someten a los Juzgados y Tribunales de Talavera de la Reina, con renuncia expresa a cualquier otro fuero que pudiera corresponderles.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Back link -->
+    <div class="mt-16 pt-8 border-t border-zinc-800">
+      <a href="/" class="inline-flex items-center gap-2 text-zinc-500 hover:text-orange-500 text-sm font-mono tracking-widest uppercase transition-colors">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+        </svg>
+        Volver al inicio
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+
+</BaseLayout>

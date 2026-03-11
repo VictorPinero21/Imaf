@@ -1,0 +1,43 @@
+---
+import SEO from '../components/SEO.astro'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import "../styles/global.css";
+interface Props {
+    title: string;
+    description: string;
+    image?: string;
+}
+
+const { title, description, image } = Astro.props;
+
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <SEO title={title} description={description} image={image} />
+    <meta name="generator" content={Astro.generator} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Imaf | Mecanizados y utillaje CLM",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle Dr. Severo Ochoa, 96R",
+          "addressLocality": "Talavera de la Reina",
+          "addressRegion": "Castilla-La Mancha",
+          "postalCode": "45614",
+          "addressCountry": "ES"
+        },
+        "telephone": "+34 925 80 06 95",
+        "url": "https://maquimaf.es"
+      })} />
+      <script src="https://analytics.ahrefs.com/analytics.js" data-key="Aod8UC1ll6PL6SlTpJNkQQ" async></script>
+  </head>
+  <body>
+    <Header/>
+    <slot />
+    <Footer/>
+  </body>
+</html>

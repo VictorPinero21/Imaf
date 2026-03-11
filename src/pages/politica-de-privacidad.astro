@@ -1,0 +1,162 @@
+---
+// src/pages/politica-de-privacidad.astro
+import BaseLayout from "../layout/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Política de Privacidad"
+  description="Política de privacidad de Imaf S.L. — Información sobre el tratamiento de datos personales conforme al RGPD."
+>
+
+<section class="relative min-h-screen bg-zinc-950 overflow-hidden">
+
+  <!-- Grid background -->
+  <div class="absolute inset-0 opacity-10"
+    style="background-image: linear-gradient(#71717a 1px, transparent 1px), linear-gradient(90deg, #71717a 1px, transparent 1px); background-size: 40px 40px;">
+  </div>
+
+  <!-- Corner brackets -->
+  <div class="absolute top-8 left-8 w-8 h-8 border-t-2 border-l-2 border-orange-500/70"></div>
+  <div class="absolute top-8 right-8 w-8 h-8 border-t-2 border-r-2 border-orange-500/70"></div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-6 lg:px-12 py-24">
+
+    <!-- Header -->
+    <div class="mb-16">
+      <div class="inline-flex items-center gap-3 mb-6">
+        <div class="w-6 h-px bg-orange-500"></div>
+        <span class="text-orange-500 text-xs font-mono tracking-[0.3em] uppercase">Legal</span>
+      </div>
+      <h1 class="text-5xl font-black text-white" style="font-family: 'Barlow Condensed', sans-serif;">
+        Política de Privacidad
+      </h1>
+      <p class="text-zinc-500 text-sm mt-3 font-mono">Última actualización: {new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+    </div>
+
+    <!-- Contenido -->
+    <div class="space-y-12" style="font-family: 'DM Sans', sans-serif;">
+
+      <div class="space-y-4">
+        <h2 class="text-white text-xl font-bold border-l-2 border-orange-500 pl-4" style="font-family: 'Barlow Condensed', sans-serif;">
+          1. Responsable del tratamiento
+        </h2>
+        <div class="text-zinc-400 leading-relaxed space-y-1 pl-6">
+          <p><span class="text-zinc-300 font-medium">Identidad:</span> Imaf S.L.</p>
+          <p><span class="text-zinc-300 font-medium">CIF:</span> B45727732</p>
+          <p><span class="text-zinc-300 font-medium">Domicilio:</span> Calle Dr. Severo Ochoa, 96R, 45614, Talavera de la Reina, Castilla-La Mancha</p>
+          <p><span class="text-zinc-300 font-medium">Email:</span> info@maquimaf.es</p>
+          <p><span class="text-zinc-300 font-medium">Teléfono:</span> +34 925 80 06 95</p>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="text-white text-xl font-bold border-l-2 border-orange-500 pl-4" style="font-family: 'Barlow Condensed', sans-serif;">
+          2. Datos que recopilamos
+        </h2>
+        <p class="text-zinc-400 leading-relaxed pl-6">
+          A través del formulario de contacto del sitio web, Imaf S.L. recoge los siguientes datos personales: nombre y apellidos, nombre de empresa, dirección de correo electrónico, número de teléfono y el contenido del mensaje enviado. No se recogen datos especialmente protegidos.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="text-white text-xl font-bold border-l-2 border-orange-500 pl-4" style="font-family: 'Barlow Condensed', sans-serif;">
+          3. Finalidad del tratamiento
+        </h2>
+        <p class="text-zinc-400 leading-relaxed pl-6">
+          Los datos personales facilitados a través del formulario de contacto serán tratados con las siguientes finalidades:
+        </p>
+        <ul class="text-zinc-400 space-y-2 pl-10 list-disc">
+          <li>Gestionar y responder las solicitudes de información o presupuesto enviadas por el usuario.</li>
+          <li>Mantener la relación comercial derivada del contacto establecido.</li>
+          <li>En caso de consentimiento expreso, envío de comunicaciones comerciales sobre productos y servicios de Imaf S.L.</li>
+        </ul>
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="text-white text-xl font-bold border-l-2 border-orange-500 pl-4" style="font-family: 'Barlow Condensed', sans-serif;">
+          4. Legitimación
+        </h2>
+        <p class="text-zinc-400 leading-relaxed pl-6">
+          La base legal para el tratamiento de sus datos es el consentimiento del interesado, otorgado mediante el envío voluntario del formulario de contacto, de conformidad con el artículo 6.1.a) del Reglamento General de Protección de Datos (RGPD).
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="text-white text-xl font-bold border-l-2 border-orange-500 pl-4" style="font-family: 'Barlow Condensed', sans-serif;">
+          5. Conservación de los datos
+        </h2>
+        <p class="text-zinc-400 leading-relaxed pl-6">
+          Los datos personales se conservarán durante el tiempo necesario para gestionar su solicitud y, en su caso, durante el tiempo que dure la relación comercial. Una vez concluida dicha relación, los datos serán bloqueados y posteriormente eliminados conforme a los plazos legales aplicables.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="text-white text-xl font-bold border-l-2 border-orange-500 pl-4" style="font-family: 'Barlow Condensed', sans-serif;">
+          6. Cesión de datos a terceros
+        </h2>
+        <p class="text-zinc-400 leading-relaxed pl-6">
+          Imaf S.L. no cederá sus datos personales a terceros, salvo obligación legal. Los datos podrán ser accedidos por proveedores de servicios tecnológicos que actúan como encargados del tratamiento (por ejemplo, el proveedor del servicio de envío de formularios), siempre bajo contrato de encargo de tratamiento y con las garantías exigidas por el RGPD.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="text-white text-xl font-bold border-l-2 border-orange-500 pl-4" style="font-family: 'Barlow Condensed', sans-serif;">
+          7. Derechos del interesado
+        </h2>
+        <p class="text-zinc-400 leading-relaxed pl-6">
+          El usuario puede ejercer en cualquier momento los siguientes derechos, dirigiéndose a <span class="text-zinc-300">info@maquimaf.es</span> con copia de su documento de identidad:
+        </p>
+        <ul class="text-zinc-400 space-y-2 pl-10 list-disc">
+          <li><span class="text-zinc-300 font-medium">Acceso:</span> conocer qué datos suyos estamos tratando.</li>
+          <li><span class="text-zinc-300 font-medium">Rectificación:</span> corregir datos inexactos o incompletos.</li>
+          <li><span class="text-zinc-300 font-medium">Supresión:</span> solicitar la eliminación de sus datos.</li>
+          <li><span class="text-zinc-300 font-medium">Oposición:</span> oponerse al tratamiento de sus datos.</li>
+          <li><span class="text-zinc-300 font-medium">Limitación:</span> solicitar la limitación del tratamiento.</li>
+          <li><span class="text-zinc-300 font-medium">Portabilidad:</span> recibir sus datos en formato estructurado.</li>
+        </ul>
+        <p class="text-zinc-400 leading-relaxed pl-6 mt-4">
+          Asimismo, tiene derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) en <span class="text-zinc-300">www.aepd.es</span> si considera que el tratamiento no se ajusta a la normativa vigente.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="text-white text-xl font-bold border-l-2 border-orange-500 pl-4" style="font-family: 'Barlow Condensed', sans-serif;">
+          8. Seguridad
+        </h2>
+        <p class="text-zinc-400 leading-relaxed pl-6">
+          Imaf S.L. aplica las medidas técnicas y organizativas necesarias para garantizar la seguridad de los datos personales y evitar su alteración, pérdida, tratamiento o acceso no autorizado, habida cuenta del estado de la tecnología, la naturaleza de los datos y los riesgos a los que están expuestos.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <h2 class="text-white text-xl font-bold border-l-2 border-orange-500 pl-4" style="font-family: 'Barlow Condensed', sans-serif;">
+          9. Cambios en la política de privacidad
+        </h2>
+        <p class="text-zinc-400 leading-relaxed pl-6">
+          Imaf S.L. se reserva el derecho a modificar la presente política de privacidad para adaptarla a novedades legislativas o jurisprudenciales. Los cambios serán publicados en esta misma página con la fecha de actualización correspondiente.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Links legales -->
+    <div class="mt-16 pt-8 border-t border-zinc-800 flex flex-col sm:flex-row gap-4 justify-between items-start sm:items-center">
+      <a href="/" class="inline-flex items-center gap-2 text-zinc-500 hover:text-orange-500 text-sm font-mono tracking-widest uppercase transition-colors">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+        </svg>
+        Volver al inicio
+      </a>
+      <a href="/aviso-legal" class="text-zinc-500 hover:text-orange-500 text-sm font-mono tracking-widest uppercase transition-colors">
+        Aviso Legal →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+
+</BaseLayout>

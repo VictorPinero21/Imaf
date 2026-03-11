@@ -1,0 +1,304 @@
+---
+import BaseLayout from "../layout/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Contacto"
+  description="Contacta con Imaf para solicitar presupuesto de mecanizado CNC o utillaje industrial en Talavera de la Reina. Respondemos en menos de 24 horas."
+>
+
+<section class="relative min-h-screen bg-zinc-950 overflow-hidden">
+
+  <!-- Grid background -->
+  <div class="absolute inset-0 opacity-10"
+    style="background-image: linear-gradient(#71717a 1px, transparent 1px), linear-gradient(90deg, #71717a 1px, transparent 1px); background-size: 40px 40px;">
+  </div>
+
+  <!-- Accent lines -->
+  <div class="absolute top-0 left-1/2 w-px h-32 bg-gradient-to-b from-orange-500/60 to-transparent"></div>
+  <div class="absolute bottom-0 right-1/3 w-px h-48 bg-gradient-to-t from-orange-500/30 to-transparent"></div>
+
+  <!-- Corner brackets -->
+  <div class="absolute top-8 left-8 w-8 h-8 border-t-2 border-l-2 border-orange-500/70"></div>
+  <div class="absolute top-8 right-8 w-8 h-8 border-t-2 border-r-2 border-orange-500/70"></div>
+  <div class="absolute bottom-8 left-8 w-8 h-8 border-b-2 border-l-2 border-orange-500/70"></div>
+  <div class="absolute bottom-8 right-8 w-8 h-8 border-b-2 border-r-2 border-orange-500/70"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6 lg:px-12 py-24">
+
+    <!-- Header -->
+    <div class="mb-16">
+      <div class="inline-flex items-center gap-3 mb-6">
+        <div class="w-6 h-px bg-orange-500"></div>
+        <span class="text-orange-500 text-xs font-mono tracking-[0.3em] uppercase">Contacto</span>
+      </div>
+      <h1 class="text-5xl lg:text-6xl font-black text-white leading-tight"
+        style="font-family: 'Barlow Condensed', sans-serif;">
+        Hablemos de<br />
+        <span class="text-orange-500">tu proyecto</span>
+      </h1>
+      <p class="text-zinc-400 text-lg mt-4 max-w-xl" style="font-family: 'DM Sans', sans-serif;">
+        Cuéntanos qué necesitas y te enviamos presupuesto en menos de 24 horas laborables.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-5 gap-12 items-start">
+
+      <!-- Formulario — ocupa 3 columnas -->
+      <div class="lg:col-span-3">
+        <form
+          id="contactForm"
+          class="space-y-5"
+          novalidate
+        >
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="space-y-1.5">
+              <label class="text-zinc-400 text-xs font-mono tracking-widest uppercase" for="nombre">
+                Nombre *
+              </label>
+              <input
+                id="nombre"
+                name="nombre"
+                type="text"
+                required
+                placeholder="Tu nombre"
+                class="w-full bg-zinc-900 border border-zinc-800 focus:border-orange-500 text-white placeholder-zinc-600 px-4 py-3 text-sm outline-none transition-colors duration-200"
+                style="font-family: 'DM Sans', sans-serif;"
+              />
+            </div>
+            <div class="space-y-1.5">
+              <label class="text-zinc-400 text-xs font-mono tracking-widest uppercase" for="empresa">
+                Empresa
+              </label>
+              <input
+                id="empresa"
+                name="empresa"
+                type="text"
+                placeholder="Nombre de tu empresa"
+                class="w-full bg-zinc-900 border border-zinc-800 focus:border-orange-500 text-white placeholder-zinc-600 px-4 py-3 text-sm outline-none transition-colors duration-200"
+                style="font-family: 'DM Sans', sans-serif;"
+              />
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="space-y-1.5">
+              <label class="text-zinc-400 text-xs font-mono tracking-widest uppercase" for="telefono">
+                Teléfono *
+              </label>
+              <input
+                id="telefono"
+                name="telefono"
+                type="tel"
+                required
+                placeholder="+34 600 000 000"
+                class="w-full bg-zinc-900 border border-zinc-800 focus:border-orange-500 text-white placeholder-zinc-600 px-4 py-3 text-sm outline-none transition-colors duration-200"
+                style="font-family: 'DM Sans', sans-serif;"
+              />
+            </div>
+            <div class="space-y-1.5">
+              <label class="text-zinc-400 text-xs font-mono tracking-widest uppercase" for="email">
+                Email *
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                placeholder="tu@empresa.com"
+                class="w-full bg-zinc-900 border border-zinc-800 focus:border-orange-500 text-white placeholder-zinc-600 px-4 py-3 text-sm outline-none transition-colors duration-200"
+                style="font-family: 'DM Sans', sans-serif;"
+              />
+            </div>
+          </div>
+
+          <div class="space-y-1.5">
+            <label class="text-zinc-400 text-xs font-mono tracking-widest uppercase" for="servicio">
+              Servicio
+            </label>
+            <select
+              id="servicio"
+              name="servicio"
+              class="w-full bg-zinc-900 border border-zinc-800 focus:border-orange-500 text-zinc-300 px-4 py-3 text-sm outline-none transition-colors duration-200 appearance-none cursor-pointer"
+              style="font-family: 'DM Sans', sans-serif;"
+            >
+              <option value="">Selecciona un servicio</option>
+              <option value="mecanizado-cnc">Mecanizado CNC</option>
+              <option value="utillaje-industrial">Utillaje Industrial</option>
+              <option value="fabricacion-medida">Fabricación a medida</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="space-y-1.5">
+            <label class="text-zinc-400 text-xs font-mono tracking-widest uppercase" for="mensaje">
+              Descripción del proyecto *
+            </label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              required
+              rows="5"
+              placeholder="Describe tu pieza o proyecto. Si tienes planos en PDF o STEP, los puedes enviar por email tras contactarnos."
+              class="w-full bg-zinc-900 border border-zinc-800 focus:border-orange-500 text-white placeholder-zinc-600 px-4 py-3 text-sm outline-none transition-colors duration-200 resize-none"
+              style="font-family: 'DM Sans', sans-serif;"
+            ></textarea>
+          </div>
+
+          <!-- Submit -->
+          <button
+            type="submit"
+            id="submitBtn"
+            class="group w-full inline-flex items-center justify-center gap-3 bg-orange-500 hover:bg-orange-400 text-black font-bold text-sm tracking-widest uppercase px-8 py-4 transition-all duration-200"
+          >
+            <span id="submitText">Enviar solicitud</span>
+            <svg id="submitArrow" class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+            <svg id="submitSpinner" class="w-4 h-4 animate-spin hidden" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+            </svg>
+          </button>
+
+          <!-- Success / Error messages -->
+          <div id="successMsg" class="hidden border border-green-500/40 bg-green-500/10 text-green-400 text-sm px-4 py-3 font-mono">
+            ✓ Mensaje enviado. Te contactamos en menos de 24 horas.
+          </div>
+          <div id="errorMsg" class="hidden border border-red-500/40 bg-red-500/10 text-red-400 text-sm px-4 py-3 font-mono">
+            ✗ Error al enviar. Llámanos directamente al +34 925 80 06 95.
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Info columna derecha — ocupa 2 columnas -->
+      <div class="lg:col-span-2 space-y-6 lg:pt-2">
+
+        <!-- Respuesta rápida highlight -->
+        <div class="border border-orange-500/30 bg-orange-500/5 p-5">
+          <div class="text-orange-500 text-xs font-mono tracking-widest uppercase mb-2">Tiempo de respuesta</div>
+          <div class="text-white text-3xl font-black" style="font-family: 'Barlow Condensed', sans-serif;">— 24h</div>
+          <div class="text-zinc-500 text-sm mt-1" style="font-family: 'DM Sans', sans-serif;">Presupuesto garantizado en menos de 24 horas laborables.</div>
+        </div>
+
+        <!-- Datos de contacto -->
+        <div class="space-y-4">
+
+          <a href="tel:+34925800695"
+            class="flex items-center gap-4 border border-zinc-800 hover:border-zinc-600 bg-zinc-900/50 hover:bg-zinc-900 p-4 transition-all duration-200 group">
+            <div class="w-10 h-10 border border-zinc-700 group-hover:border-orange-500/50 flex items-center justify-center shrink-0 transition-colors">
+              <svg class="w-4 h-4 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+            </div>
+            <div>
+              <div class="text-zinc-500 text-xs font-mono tracking-widest uppercase">Teléfono</div>
+              <div class="text-white text-sm font-medium mt-0.5" style="font-family: 'DM Sans', sans-serif;">+34 925 80 06 95</div>
+            </div>
+          </a>
+
+          <a href="mailto:info@maquimaf.es"
+            class="flex items-center gap-4 border border-zinc-800 hover:border-zinc-600 bg-zinc-900/50 hover:bg-zinc-900 p-4 transition-all duration-200 group">
+            <div class="w-10 h-10 border border-zinc-700 group-hover:border-orange-500/50 flex items-center justify-center shrink-0 transition-colors">
+              <svg class="w-4 h-4 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <div class="text-zinc-500 text-xs font-mono tracking-widest uppercase">Email</div>
+              <div class="text-white text-sm font-medium mt-0.5" style="font-family: 'DM Sans', sans-serif;">info@maquimaf.es</div>
+            </div>
+          </a>
+
+          <div class="flex items-start gap-4 border border-zinc-800 bg-zinc-900/50 p-4">
+            <div class="w-10 h-10 border border-zinc-700 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div>
+              <div class="text-zinc-500 text-xs font-mono tracking-widest uppercase">Dirección</div>
+              <div class="text-white text-sm font-medium mt-0.5" style="font-family: 'DM Sans', sans-serif;">
+                C/ Dr. Severo Ochoa, 96R<br />
+                45614 Talavera de la Reina<br />
+                Castilla-La Mancha
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 border border-zinc-800 bg-zinc-900/50 p-4">
+            <div class="w-10 h-10 border border-zinc-700 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <div class="text-zinc-500 text-xs font-mono tracking-widest uppercase">Horario</div>
+              <div class="text-white text-sm font-medium mt-0.5" style="font-family: 'DM Sans', sans-serif;">
+                Lun – Vie: 8:00 – 18:00
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+
+<script>
+  const form = document.getElementById('contactForm') as HTMLFormElement;
+  const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
+  const submitText = document.getElementById('submitText')!;
+  const submitArrow = document.getElementById('submitArrow')!;
+  const submitSpinner = document.getElementById('submitSpinner')!;
+  const successMsg = document.getElementById('successMsg')!;
+  const errorMsg = document.getElementById('errorMsg')!;
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Loading state
+    submitBtn.disabled = true;
+    submitText.textContent = 'Enviando...';
+    submitArrow.classList.add('hidden');
+    submitSpinner.classList.remove('hidden');
+    successMsg.classList.add('hidden');
+    errorMsg.classList.add('hidden');
+
+    try {
+      const formData = new FormData(form);
+
+      // Aquí conectas con tu backend, Formspree, Resend, etc.
+      // Ejemplo con Formspree: cambia YOUR_FORM_ID por el tuyo
+      const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        method: 'POST',
+        body: formData,
+        headers: { Accept: 'application/json' },
+      });
+
+      if (res.ok) {
+        successMsg.classList.remove('hidden');
+        form.reset();
+      } else {
+        throw new Error('Error en el servidor');
+      }
+    } catch {
+      errorMsg.classList.remove('hidden');
+    } finally {
+      submitBtn.disabled = false;
+      submitText.textContent = 'Enviar solicitud';
+      submitArrow.classList.remove('hidden');
+      submitSpinner.classList.add('hidden');
+    }
+  });
+</script>
+
+</BaseLayout>

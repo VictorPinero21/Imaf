@@ -1,0 +1,353 @@
+---
+import CountUp from "./ui/countUp.astro";
+const {
+  title = "Mecanizados y Utillajes Castilla-La Mancha IMAF",
+  subtitle = "Precisión industrial, innovación y fabricación a medida",
+  description = "Especialistas en mecanizado CNC, fabricación de utillajes y soluciones industriales para empresas que necesitan calidad, rapidez y precisión.",
+  ctaPrimary = "Solicitar presupuesto",
+  ctaSecondary = "Ver servicios",
+} = Astro.props;
+---
+
+<section
+  class="relative min-h-screen bg-zinc-950 overflow-hidden flex items-center"
+>
+  <!-- Grid background pattern -->
+  <div
+    class="absolute inset-0 opacity-10"
+    style="background-image: linear-gradient(#71717a 1px, transparent 1px), linear-gradient(90deg, #71717a 1px, transparent 1px); background-size: 40px 40px;"
+  >
+  </div>
+
+  <!-- Diagonal accent bar -->
+  <div
+    class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-orange-500/10 to-transparent pointer-events-none"
+  >
+  </div>
+  <div
+    class="absolute bottom-0 left-0 w-px h-2/3 bg-gradient-to-t from-transparent via-orange-500/60 to-transparent"
+  >
+  </div>
+  <div
+    class="absolute top-0 right-1/3 w-px h-1/2 bg-gradient-to-b from-transparent via-zinc-500/40 to-transparent"
+  >
+  </div>
+
+  <!-- Corner brackets decoration -->
+  <div
+    class="absolute top-8 left-8 w-8 h-8 border-t-2 border-l-2 border-orange-500/70"
+  >
+  </div>
+  <div
+    class="absolute top-8 right-8 w-8 h-8 border-t-2 border-r-2 border-orange-500/70"
+  >
+  </div>
+  <div
+    class="absolute bottom-8 left-8 w-8 h-8 border-b-2 border-l-2 border-orange-500/70"
+  >
+  </div>
+  <div
+    class="absolute bottom-8 right-8 w-8 h-8 border-b-2 border-r-2 border-orange-500/70"
+  >
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6 lg:px-12 py-24 w-full">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <!-- Left content -->
+      <div class="space-y-8">
+        <!-- Label -->
+        <div class="inline-flex items-center gap-3">
+          <div class="w-6 h-px bg-orange-500"></div>
+          <span
+            class="text-orange-500 text-xs font-mono tracking-[0.3em] uppercase"
+          >
+            Talavera de la Reina · CLM
+          </span>
+        </div>
+
+        <!-- H1 -->
+        <h1
+          class="text-5xl lg:text-6xl font-black text-white leading-[1.05] tracking-tight"
+          style="font-family: 'Barlow Condensed', sans-serif;"
+        >
+          Mecanizado CNC<br />
+          <span class="text-orange-500">y Utillaje</span><br />
+          Industrial
+        </h1>
+
+        <!-- Description -->
+        <p
+          class="text-zinc-400 text-lg leading-relaxed max-w-md"
+          style="font-family: 'DM Sans', sans-serif;"
+        >
+          Fabricamos piezas a medida con tolerancias de hasta
+          <span class="text-zinc-200 font-medium">0.01mm</span>. Acero,
+          aluminio, latón y más. Presupuesto en
+          <span class="text-zinc-200 font-medium">menos de 24 horas</span>.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-4 pt-2">
+          <a
+            href="/contacto"
+            class="group inline-flex items-center justify-center gap-3 bg-orange-500 hover:bg-orange-400 text-black font-bold text-sm tracking-widest uppercase px-8 py-4 transition-all duration-200"
+          >
+            Solicita presupuesto
+            <svg
+              class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+          <a
+            href="/servicios"
+            class="inline-flex items-center justify-center gap-2 border border-zinc-700 hover:border-zinc-400 text-zinc-400 hover:text-white font-medium text-sm tracking-widest uppercase px-8 py-4 transition-all duration-200"
+          >
+            Ver servicios
+          </a>
+        </div>
+
+        <!-- Stats row -->
+        <div class="flex gap-8 pt-4 border-t border-zinc-800">
+          <div>
+            <div
+              class="text-2xl font-black text-white"
+              style="font-family: 'Barlow Condensed', sans-serif;"
+            >
+            <CountUp value={20}   suffix="+"    label="Años de experiencia" />
+              
+            </div>
+            <div class="text-zinc-500 text-xs uppercase tracking-widest mt-1">
+              Años de experiencia
+            </div>
+          </div>
+          <div class="w-px bg-zinc-800"></div>
+          <div>
+            <div
+              class="text-2xl font-black text-white"
+              style="font-family: 'Barlow Condensed', sans-serif;"
+            >
+              0.01mm
+            </div>
+            <div class="text-zinc-500 text-xs uppercase tracking-widest mt-1">
+              Tolerancia máxima
+            </div>
+          </div>
+          <div class="w-px bg-zinc-800"></div>
+          <div>
+            <div
+              class="text-2xl font-black text-white"
+              style="font-family: 'Barlow Condensed', sans-serif;"
+            >
+              24h
+            </div>
+            <div class="text-zinc-500 text-xs uppercase tracking-widest mt-1">
+              Respuesta presupuesto
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: service cards -->
+      <div class="space-y-3">
+        <div
+          class="group border border-zinc-800 hover:border-orange-500/50 bg-zinc-900/50 hover:bg-zinc-900 p-6 transition-all duration-300 cursor-default"
+        >
+          <div class="flex items-start justify-between">
+            <div>
+              <div
+                class="text-orange-500 text-xs font-mono tracking-widest uppercase mb-2"
+              >
+                01
+              </div>
+              <h3
+                class="text-white font-bold text-lg mb-2"
+                style="font-family: 'Barlow Condensed', sans-serif;"
+              >
+                Mecanizado CNC
+              </h3>
+              <p class="text-zinc-500 text-sm leading-relaxed">
+                Tornos y fresadoras CNC de última generación. Piezas de alta
+                precisión para cualquier industria.
+              </p>
+            </div>
+            <svg
+              class="w-5 h-5 text-zinc-700 group-hover:text-orange-500 transition-colors shrink-0 ml-4 mt-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div
+          class="group border border-zinc-800 hover:border-orange-500/50 bg-zinc-900/50 hover:bg-zinc-900 p-6 transition-all duration-300 cursor-default"
+        >
+          <div class="flex items-start justify-between">
+            <div>
+              <div
+                class="text-orange-500 text-xs font-mono tracking-widest uppercase mb-2"
+              >
+                02
+              </div>
+              <h3
+                class="text-white font-bold text-lg mb-2"
+                style="font-family: 'Barlow Condensed', sans-serif;"
+              >
+                Utillaje Industrial
+              </h3>
+              <p class="text-zinc-500 text-sm leading-relaxed">
+                Diseño y fabricación de utillajes, plantillas y herramientas a
+                medida para procesos industriales.
+              </p>
+            </div>
+            <svg
+              class="w-5 h-5 text-zinc-700 group-hover:text-orange-500 transition-colors shrink-0 ml-4 mt-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div
+          class="group border border-zinc-800 hover:border-orange-500/50 bg-zinc-900/50 hover:bg-zinc-900 p-6 transition-all duration-300 cursor-default"
+        >
+          <div class="flex items-start justify-between">
+            <div>
+              <div
+                class="text-orange-500 text-xs font-mono tracking-widest uppercase mb-2"
+              >
+                03
+              </div>
+              <h3
+                class="text-white font-bold text-lg mb-2"
+                style="font-family: 'Barlow Condensed', sans-serif;"
+              >
+                Fabricación a medida
+              </h3>
+              <p class="text-zinc-500 text-sm leading-relaxed">
+                Desde piezas únicas hasta series medianas. Trabajamos con planos
+                PDF o archivos STEP.
+              </p>
+            </div>
+            <svg
+              class="w-5 h-5 text-zinc-700 group-hover:text-orange-500 transition-colors shrink-0 ml-4 mt-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=DM+Sans:wght@400;500&display=swap"
+  rel="stylesheet"
+/>
+<!-- Background gradient -->
+<div
+  class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-950 to-black"
+>
+</div>
+
+<!-- Decorative blur -->
+<div
+  class="absolute -top-40 -right-40 w-[500px] h-[500px] bg-blue-600/20 blur-3xl rounded-full"
+>
+</div>
+
+<div class="relative max-w-7xl mx-auto px-6 py-24 lg:py-32">
+  <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <!-- Text -->
+    <div class="space-y-6">
+      <span
+        class="inline-block text-sm font-semibold text-blue-400 tracking-wider uppercase"
+      >
+        Industria · Mecanizado CNC
+      </span>
+
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+        {title}
+      </h1>
+
+      <p class="text-lg text-gray-300 max-w-xl">
+        {description}
+      </p>
+
+      <div class="flex flex-wrap gap-4 pt-4">
+        <a
+          href="#contacto"
+          class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 transition font-semibold shadow-lg shadow-blue-600/20"
+        >
+          {ctaPrimary}
+        </a>
+
+        <a
+          href="#servicios"
+          class="px-6 py-3 rounded-xl border border-gray-700 hover:border-gray-500 hover:bg-gray-900 transition font-semibold"
+        >
+          {ctaSecondary}
+        </a>
+      </div>
+
+      <!-- Trust indicators -->
+      <div class="flex flex-wrap gap-6 pt-6 text-sm text-gray-400">
+        <span>✔ Alta precisión</span>
+        <span>✔ Fabricación personalizada</span>
+        <span>✔ Entrega rápida</span>
+      </div>
+    </div>
+
+    <!-- Visual side -->
+    <div class="relative">
+      <div
+        class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-800 shadow-2xl flex items-center justify-center"
+      >
+        <span class="text-gray-500 text-center px-8">
+          Imagen industrial<br />
+          (máquina CNC / taller)
+        </span>
+      </div>
+
+      <!-- floating card -->
+      <div
+        class="absolute -bottom-6 -left-6 bg-gray-900 border border-gray-800 rounded-xl p-5 shadow-xl"
+      >
+        <p class="text-sm text-gray-400">Experiencia</p>
+        <p class="text-2xl font-bold">+15 años</p>
+      </div>
+    </div>
+  </div>
+</div>

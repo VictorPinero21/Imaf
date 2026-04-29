@@ -1,44 +1,71 @@
 ---
-import SEO from '../components/SEO.astro'
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
+import SEO from "../components/SEO.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+
 interface Props {
-    title: string;
-    description: string;
-    image?: string;
+  title: string;
+  description: string;
+  image?: string;
+  noindex?: boolean;
+  localBusiness?: boolean;
 }
 
-const { title, description, image } = Astro.props;
-
+const {
+  title,
+  description,
+  image,
+  noindex = false,
+  localBusiness = false,
+} = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es" class="scroll-smooth">
   <head>
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <SEO title={title} description={description} image={image} />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="google-site-verification" content="CNRWcCsBDsv_lryJD9yDsVXANMim7kbPBoXzMFtkQg4" />
-    <script type="application/ld+json" set:html={JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Imaf | Mecanizados y utillaje CLM",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Calle Dr. Severo Ochoa, 96R",
-          "addressLocality": "Talavera de la Reina",
-          "addressRegion": "Castilla-La Mancha",
-          "postalCode": "45614",
-          "addressCountry": "ES"
-        },
-        "telephone": "+34 925 80 06 95",
-        "url": "https://maquimaf.es"
-      })} />
-      <script src="https://analytics.ahrefs.com/analytics.js" data-key="Aod8UC1ll6PL6SlTpJNkQQ" async></script>
+    <meta
+      name="google-site-verification"
+      content="CNRWcCsBDsv_lryJD9yDsVXANMim7kbPBoXzMFtkQg4"
+    />
+    {
+      localBusiness && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ManufacturingBusiness",
+            name: "Imaf | Mecanizados y utillaje CLM",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Calle Dr. Severo Ochoa, 96R",
+              addressLocality: "Talavera de la Reina",
+              addressRegion: "Castilla-La Mancha",
+              postalCode: "45614",
+              addressCountry: "ES",
+            },
+            telephone: "+34925800695",
+            openingHours: "Mo-Fr 08:00-17:00",
+            url: "https://maquimaf.es",
+          })}
+        />
+      )
+    }
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5WC82ZJF6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args: unknown[]) {
+        window.dataLayer.push(args);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-L5WC82ZJF6");
+    </script>
   </head>
-  <body>
-    <Header/>
+  <body class="h-screen bg-zinc950 text-zinc-900 font-sans">
     <slot />
-    <Footer/>
   </body>
 </html>

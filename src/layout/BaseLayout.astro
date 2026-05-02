@@ -56,13 +56,11 @@ const {
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5WC82ZJF6"
     ></script>
-    <script>
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args: unknown[]) {
-        window.dataLayer.push(args);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-L5WC82ZJF6");
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L5WC82ZJF6');
     </script>
   </head>
   <body class="h-screen bg-zinc950 text-zinc-900 font-sans">
